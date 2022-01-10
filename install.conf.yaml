@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+    ~/.tmux.conf: tmux.conf
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.config/nvim: nvim
+    ~/.config/i3: i3
+    ~/.config/starship.toml: starship.toml
+

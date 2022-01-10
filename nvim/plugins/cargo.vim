@@ -1,0 +1,1 @@
+Plug 'timonv/vim-cargo'
