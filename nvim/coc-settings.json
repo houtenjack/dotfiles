@@ -19,7 +19,16 @@
     "git.changeRemovedSign.text": "▔",
     "tailwindCSS.validate": true,
     "tailwindCSS.emmetCompletions": true,
-    "python.linting.mypyEnabled": true,
+    "python.venvPath": "./.venv",
+    "python.analysis.typeCheckingMode": "strict",
     "python.formatting.provider": "black",
-    "python.venvPath": "./.venv"
+    "python.formatting.blackPath": "black",
+    "python.linting.mypyEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "python",
+        "rust",
+        "json",
+        "sql"
+    ]
 }

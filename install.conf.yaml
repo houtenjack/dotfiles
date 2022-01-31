@@ -14,8 +14,11 @@
         path: ssh/config
         create: true
     ~/.tmux.conf: tmux.conf
+    ~/antigen.zsh: antigen.zsh
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
+    ~/.zsh_aliases: zsh_aliases
+    ~/.ssh_aliases: ssh/aliases
     ~/.config/nvim: nvim
     ~/.config/i3: i3
     ~/.config/starship.toml: starship.toml
