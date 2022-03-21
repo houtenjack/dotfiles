@@ -13,8 +13,10 @@
     ~/.ssh/config:
         path: ssh/config
         create: true
+    ~/.tmux: tmux
     ~/.tmux.conf: tmux.conf
     ~/antigen.zsh: antigen.zsh
+    ~/.antigenrc: antigenrc
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.zsh_aliases: zsh_aliases
