@@ -39,19 +39,41 @@ let g:python3_host_prog='~/.pyenv/versions/pynvim/bin/python3'
 
 let mapleader = "`"
 
+nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
+nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
-nmap <leader>er :vsplit ~/.config/nvim/init.vim<cr>
 
-nmap <leader>u :undo;
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+nnoremap <leader>pv :Vex<CR>
+nnoremap <leader>pf :Files<CR>
+" inoremap jk <esc>:w<CR>
+" open new split panes to right and below
+set splitright
+set splitbelow
 
 " Allow gf to open non-existent files
 map gf :edit <cfile><cr>
 
+" remap for indent/dedent
+" :noremap <C-]> > gv
+" :noremap <C-[> < gv
+
 " nerdtree
-nnoremap <leader>e :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" nnoremap <leader>e :NERDTreeFocus<CR>
+" nnoremap <C-n> :NERDTree<CR>
+" nnoremap <C-t> :NERDTreeToggle<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>
 
 "--------------------------------------------------------------------------
 " Plugins
@@ -66,26 +88,33 @@ endif
 
 call plug#begin(data_dir . '/plugins')
 
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-telescope/telescope.nvim'
-
 source ~/.config/nvim/plugins/coc.vim
-source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/fzf.vim
-" source ~/.config/nvim/plugins/airline.vim
-source ~/.config/nvim/plugins/iceberg.vim
-" source ~/.config/nvim/plugins/dracula.vim
 source ~/.config/nvim/plugins/commentary.vim
-source ~/.config/nvim/plugins/surround.vim
-source ~/.config/nvim/plugins/nerdtree.vim
-" source ~/.config/nvim/plugins/visual-multi.vim
+source ~/.config/nvim/plugins/visual-multi.vim
 source ~/.config/nvim/plugins/sayonara.vim
 source ~/.config/nvim/plugins/lightline.vim
-source ~/.config/nvim/plugins/cargo.vim
-" source ~/.config/nvim/plugins/lsp.vim
-" source ~/.config/nvim/plugins/nord.vim
+source ~/.config/nvim/plugins/nord.vim
+source ~/.config/nvim/plugins/iceberg.vim
+source ~/.config/nvim/plugins/vim-tmux-navigator.vim
+source ~/.config/nvim/plugins/vim-fugitive.vim
+source ~/.config/nvim/plugins/markdown-preview.vim
+source ~/.config/nvim/plugins/swap-lines.vim
+source ~/.config/nvim/plugins/floaterm.vim
+source ~/.config/nvim/plugins/sneak.vim
+source ~/.config/nvim/plugins/match.vim
+Plug 'ryanoasis/vim-devicons'
+Plug 'gkeep/iceberg-dark'
+let g:lightline = { 'colorscheme': 'icebergDark' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
-doautocmd User PlugLoaded
 
+" colorscheme nord
 colorscheme iceberg
+
+" Quick-save
+nmap <leader>w :w<CR>
+nmap <leader>q :q<CR>
+
+doautocmd User PlugLoaded

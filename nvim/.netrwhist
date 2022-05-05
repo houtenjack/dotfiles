@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
-let g:netrw_dirhist_1='/home/ixi/.config/i3/wallpapers/ready'
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/jack/dotfiles/nvim'
+let g:netrw_dirhist_6='/home/didi/.dotfiles/nvim/plugins'
+let g:netrw_dirhist_5='/home/didi/leaf/leaf-radio'
+let g:netrw_dirhist_4='/home/didi/leaf/leaf-radio/leaf_radio'
+let g:netrw_dirhist_3='/home/didi/leaf/leaf-radio'
+let g:netrw_dirhist_2='/home/didi/aoc2021/src/bin'
+let g:netrw_dirhist_1='/home/didi/aoc2021/src'
+let g:netrw_dirhist_0='/home/didi/aoc2021'
+let g:netrw_dirhist_9='/home/didi/aoc2021/src/bin'
+let g:netrw_dirhist_8='/home/didi/aoc2021/src'
